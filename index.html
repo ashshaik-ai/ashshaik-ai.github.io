@@ -10,35 +10,59 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-image: url("dp.jpg"); /* Your uploaded image */
+      background-image: url("dp.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      background-attachment: fixed;
       color: white;
       min-height: 100vh;
+      position: relative;
+      z-index: 1;
     }
+
+    /* Overlay for better text visibility */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
     header {
       text-align: center;
       padding: 40px 20px 20px;
-      background-color: rgba(0, 0, 0, 0.5); /* Add contrast over background */
     }
+
     h1 {
       color: #fff;
+      font-size: 2.5rem;
     }
+
+    p {
+      font-size: 1.1rem;
+    }
+
     .post {
       background: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 8px;
       margin: 40px auto;
       max-width: 800px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
+
     footer {
       text-align: center;
       font-size: 0.9em;
       margin: 40px 0;
       color: #ccc;
     }
+
     a {
       color: #1abc9c;
       text-decoration: none;
@@ -49,7 +73,7 @@
 
   <header>
     <h1>Ashraf’s Mind Meets Machine</h1>
-    <p>Exploring thoughts, technology, and the future - powered by AI.</p>
+    <p>Exploring thoughts, technology, and the future — powered by AI.</p>
   </header>
 
   <div class="post">
